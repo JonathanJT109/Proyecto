@@ -1,0 +1,8 @@
+.paginas{
+    list-style: none;
+    text-decoration-style: none;
+    /* position: absolute;*/
+    right: 0; 
+    display: inline-block;
+
+}
