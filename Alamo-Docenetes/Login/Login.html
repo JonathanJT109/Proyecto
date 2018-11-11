@@ -15,30 +15,68 @@
 </head>
 <body>
     
-        <div class="modal-dialog text-center">
-            <div class="col-sm-8 main-section">
-                <div class="modal-content">
-                    <div class="col-12 user-img">
-                        <img src="../Img/face2.png" alt="">
+    <div class="modal-dialog text-center">
+        <div class="col-sm-8 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src="../Img/face2.png" alt="">
+                </div>
+                
+                <form  class="col-12" id="Login">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Enter Username" id="email">
                     </div>
-
-                    <form action="" class="col-12">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Enter Username">
-                        </div>
-                        <div class="form-group">
-                            <input type="password" class="form-control" placeholder="Enter Password">
-                        </div>
-                        <button type="submit" class="btn"><i class="fas fa-sign-in-alt"></i>Login</button>
-                    </form>
-                    
-                    <div class="col-12 forgot">
-                        <a href="#">Forgot Password?</a>
+                    <div class="form-group">
+                        <input type="password" class="form-control" placeholder="Enter Password" id="password">
                     </div>
-                    
-                </div><!--End of Modal Content-->
-            </div>
+                    <button type="submit" class="btn"><i class="fas fa-sign-in-alt" id="submit"></i>Login</button>
+                </form>
+                
+                <div class="col-12 forgot">
+                    <a href="#">Forgot Password?</a>
+                </div>
+                
+            </div><!--End of Modal Content-->
         </div>
+    </div>
+
+    <!-- Trigger the modal with a button -->
+
+<!-- Modal -->
+<div id="error-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close btn-close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login Error</h4>
+      </div>
+      <div class="modal-body">
+        <p>User or Password Incorrect</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
     
+    
+<script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyD6stMhtciS7mgVKt7cum_L79DAI79-cxg",
+    authDomain: "colegio-el-alamo.firebaseapp.com",
+    databaseURL: "https://colegio-el-alamo.firebaseio.com",
+    projectId: "colegio-el-alamo",
+    storageBucket: "colegio-el-alamo.appspot.com",
+    messagingSenderId: "347605153389"
+  };
+  firebase.initializeApp(config);
+</script>
+        <script src="Login.js"></script>
 </body>
 </html>
